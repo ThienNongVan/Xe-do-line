@@ -172,7 +172,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		}
 	}
 }
-
+///////////////////////////////////////////////////////////////////////////
 //-------------------------------------------//
 // Color sensor
 /*
@@ -319,7 +319,7 @@ void PID_motor2(){
 void calculate_v1_v2(){
 	velocity = vr * cos(e3) + k1 * e1;
 	omega = k2 * e2 * vr + wr + k3 * sin(e3);
-	// TÌnh van toc cua hai b·nh xe
+	// T√≠nh van toc cua hai b√°nh xe
 	v1 = (1 / r) * (velocity + b * omega);
 	v2 = (1 / r) * (velocity - b * omega);
 	ds = velocity * ts;
@@ -490,7 +490,7 @@ void run(){
 		if(color != 0)  // 1:red  2:blue  else: 0
 		{
 			stop_color_sensor();
-			HAL_Delay(3000); // chÚ 3 gi‚y 
+			HAL_Delay(3000); // ch√≤ 3 gi√¢y 
 			break;
 		}
 		//kiem tra duoc? break
